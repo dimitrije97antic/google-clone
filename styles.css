@@ -1,0 +1,127 @@
+:root {
+  --text-clr: rgba(0, 0, 0, 0.8);
+  --btn-color: #1a73e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-clr);
+}
+
+.navbar {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li {
+  padding-inline: 8px;
+  font-size: 13px;
+}
+
+.navbar .links:hover {
+  text-decoration: underline;
+}
+
+.navbar img {
+  width: 40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.navbar img:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  margin: 15px;
+  font-size: 15px;
+  color: white;
+  background-color: #1a73e8;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+.btn-sign-in:hover {
+  background-color: #3383eb;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  height: 100px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+/* ---remove x icon on the end of the search bar--- */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.hero input {
+  margin-inline: auto;
+  font-size: 1rem;
+  width: 600px;
+  height: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.hero input:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero input:focus {
+  outline: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn-light {
+  padding: 9px 15px;
+  border: none;
+  color: var(--text-clr);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.hero .btn-light:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
