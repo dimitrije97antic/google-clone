@@ -72,6 +72,13 @@ a {
   background-color: #3383eb;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 60px);
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -94,24 +101,44 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-.hero input {
+.hero .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   margin-inline: auto;
   font-size: 1rem;
   width: 600px;
   height: 45px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  padding-left: 20px;
+  padding-inline: 20px;
   margin-bottom: 20px;
 }
 
-.hero input:hover {
+.hero .search:hover {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(0, 0, 0, 0.1);
 }
 
-.hero input:focus {
+.hero .search:focus {
   outline: none;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero input {
+  color: var(--text-clr);
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+}
+.hero input:focus {
+  outline: none;
+}
+
+.hero i {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .hero .btn-light {
@@ -119,9 +146,74 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   color: var(--text-clr);
   background-color: rgba(0, 0, 0, 0.03);
+  margin: 5px;
 }
 
 .hero .btn-light:hover {
   outline: 1px solid rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.hero p {
+  font-size: 0.8rem;
+  color: var(--text-clr);
+  margin-top: 30px;
+}
+
+.hero p span {
+  color: #0044ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.5);
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  font-size: 0.9rem;
+}
+
+.footer li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-top {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .left,
+.footer .right {
+  display: flex;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 600px){
+  .footer-bottom{
+  flex-direction: column;
+  padding: 5px 0;
+  }
+
+  .footer-top{
+    justify-content: center;
+  }
+
+  .hero .search{
+    width: 90%;
+  }
 }
